@@ -757,6 +757,22 @@
     height:16px;
     fill:var(--azul)
   }
+
+/* Botón Figma */
+.exp-figma{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-family:'Space Mono',monospace;
+  font-size:11px;
+  color:var(--azul);
+  letter-spacing:.5px;
+  transition:opacity .3s
+}
+
+.exp-figma:hover{opacity:.7}
+
+.exp-figma svg{width:16px;height:16px}
   
   .exp-tareas-grid{
     display:grid;
@@ -826,6 +842,37 @@
     gap:16px;
     margin-top:48px
   }
+
+.proyectos-academicos-wrap{margin-top:56px}
+
+.proyectos-label{
+  font-family:'Space Mono',monospace;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--texto-suave);
+  margin-bottom:20px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--gris-e);
+  text-align:center
+}
+
+.academicos-grid{
+  display:grid;
+  grid-template-columns:repeat(2,220px);
+  gap:16px;
+  justify-content:center
+}
+
+.cliente-nombre small{
+  display:block;
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  color:var(--azul);
+  letter-spacing:.3px;
+  margin-top:4px;
+  text-transform:none
+}
   
   .cliente-card{
     background:var(--blanco);
@@ -2201,8 +2248,13 @@
     .exp-tareas-grid{grid-template-columns:1fr}
     
     .clientes-grid{grid-template-columns:repeat(2,1fr)}
+
+      .academicos-grid{grid-template-columns:repeat(2,1fr)}
   }
 
+@media(max-width:480px){
+  .academicos-grid{grid-template-columns:1fr}
+}
   /* ============================================================ ACCESIBILIDAD: REDUCIR MOVIMIENTO */
   @media (prefers-reduced-motion: reduce){
     *,*::before,*::after{
