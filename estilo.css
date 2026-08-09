@@ -837,11 +837,16 @@
   }
   
   .clientes-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
-    margin-top:48px
-  }
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:16px;
+  margin-top:48px
+}
+
+.clientes-grid .cliente-card{
+  flex:0 1 260px;
+}
 
 .proyectos-academicos-wrap{margin-top:56px}
 
@@ -903,14 +908,6 @@
   }
   
   .cliente-card:hover .cliente-logo{transform:scale(1.08)}
-
-/* Centrar la última tarjeta si queda sola en la fila */
-.clientes-grid .cliente-card:last-child{
-  grid-column: 1 / -1;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-}
 
   .cliente-fallback{
     font-family:'DM Serif Display',serif;
