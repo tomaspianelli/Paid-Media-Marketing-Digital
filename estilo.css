@@ -903,7 +903,15 @@
   }
   
   .cliente-card:hover .cliente-logo{transform:scale(1.08)}
-  
+
+/* Centrar la última tarjeta si queda sola en la fila */
+.clientes-grid .cliente-card:last-child{
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
   .cliente-fallback{
     font-family:'DM Serif Display',serif;
     font-size:20px;
